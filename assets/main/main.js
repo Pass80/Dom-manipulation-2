@@ -247,7 +247,8 @@ console.log(container);
 const generatePhoto = () => {
     container.textContent = '';
     const photo = document.createElement('img');
-    element = data[Math.floor(Math.random() * data.length)];
+    element = data[Math.floor(Math.random() * data.length - 1)];
     photo.src = `${element.download_url}`;
     container.appendChild(photo);
+    console.log(element.id);
 };
